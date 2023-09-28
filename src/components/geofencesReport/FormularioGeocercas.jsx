@@ -48,9 +48,13 @@ const FormularioGeocercas = () => {
                     <label htmlFor="nombreUnidad" className="text-sm font-semibold">Nombre de la Unidad</label>
                     <input type="text" name="nombreUnidad" id="nombreUnidad" {...register('nombreUnidad', {
                         required: "Este campo es requerido",
+                        minLength: {
+                            value: 3,
+                            message: "El campo debe tener al menos 3 caracteres"
+                        },
                         maxLength: {
-                            value: 10,
-                            message: "El campo debe tener al menos de 10 caracteres"
+                            value: 15,
+                            message: "El campo debe tener al menos de 15 caracteres"
                         }
                     })}
                         className={`text-sm py-1 px-1 bg-slate-200 rounded-md border-2 ${errors.nombreUnidad?.type ? "border-red-600 hover:border-red-600 outline-red-600" : "border-gray-400 hover:border-gray-600 outline-gray-600"}`} />

@@ -6,7 +6,7 @@ export const idGenerate = () => {
     return fecha + radom;
 };
 
-//CALUCULO DE TIEMPO DE DURACION DE LA UNIDAD
+//CALCULO DE TIEMPO DE DURACION DE LA UNIDAD
 export const durationTime = (report) => {
     const fechaEntrada = new Date(report.timeStamps.entrada);
     const fechaSalida = new Date(report.timeStamps.salida);
@@ -20,4 +20,15 @@ export const durationTime = (report) => {
     const duration = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
 
     return duration;
+}
+
+//ORDERNAR REPORTES DE GEOCERCAS DE FORMA DESCENDENTE
+export const sortReports = (reports) => {
+
+    return reports.sort((a, b) => {
+        const dateA = new Date(a.timeStamps.entrada);
+        const dateB = new Date(b.timeStamps.entrada);
+        return dateB - dateA;
+    })
+
 }

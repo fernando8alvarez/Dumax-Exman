@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { idGenerate, durationTime } from "../../helpers";
+import { idGenerate, durationTime, sortReports } from "../../helpers";
 
 
 const table = [
@@ -21,16 +21,17 @@ const TablaGeocercas = () => {
     useEffect(() => {
         if (infoGeocercas?.length > 0) {
             const newReports = infoGeocercas.map(item => (
-                { ...item, 
+                {
+                    ...item,
                     id: idGenerate(),
                     duration: durationTime(item)
-                 }
+                }
             ))
-            setReportes(newReports);
+            setReportes(sortReports(newReports));
         }
         else setReportes([])
     }, [infoGeocercas]);
-    
+
 
     return (
 
@@ -56,7 +57,6 @@ const TablaGeocercas = () => {
                                     <td className=" w-[16%] py-3 text-center">{items.timeStamps.salida}</td>
                                     <td className=" w-[16%] py-3 text-center">{items.duration}</td>
                                 </tr>
-
                             ))}
                         </tbody>
                     </table>
