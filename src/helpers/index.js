@@ -32,3 +32,16 @@ export const sortReports = (reports) => {
     })
 
 }
+
+export const informes = [
+    { id: 1, title: "Informe de telemetría", name:"telemetria", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group", },
+    { id: 2, title: "Informe de velocidad", name:"velocidad", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 3, title: "Informe de geocercas", name:"geocercas", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 4, title: "Informe de temperatura", name:"temperatura", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 5, title: "Informe de conducción", name:"conduccion", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 6, title: "Informe de kilometraje", name:"kilometraje", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 7, title: "Informe de combustible", name:"combustible", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 8, title: "Informe de reversa", name:"reversa", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 9, title: "Informe de remolque", name:"remolque", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+    { id: 10, title: "Informe de viajes",name:"viajes", style: "flex items-center p-2 text-gray-900 hover:bg-gray-200 border-b-2 border-gray-200 group" },
+];

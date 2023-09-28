@@ -36,8 +36,6 @@ const Dropdowns = () => {
         }
     }
 
-    console.log(report);
-
     return (
         <div className="flex justify-between items-center w-full">
             <div className="flex w-9/12 gap-4 text-slate-700">

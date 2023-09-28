@@ -4,7 +4,6 @@ import {
 } from "./actions";
 
 const initialState = {
-    loading: false,
     informesGeocercas: {},
     error: ""
 
